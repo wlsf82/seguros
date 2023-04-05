@@ -1,0 +1,28 @@
+{
+  "name": "seguros",
+  "version": "1.0.0",
+  "description": "Seguros ABC",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:open:professora": "cypress open --env profissao=professora",
+    "cy:open:programadora": "cypress open --env profissao=programadora",
+    "cy:open:arquiteta": "cypress open --env profissao=arquiteta",
+    "cy:open:taxista": "cypress open --env profissao=taxista",
+    "cy:open:dentista": "cypress open --env profissao=dentista",
+    "cy:open:medica": "cypress open --env profissao=medica",
+    "test:professora": "cypress run --env profissao=professora",
+    "test:programadora": "cypress run --env profissao=programadora",
+    "test:arquiteta": "cypress run --env profissao=arquiteta",
+    "test:taxista": "cypress run --env profissao=taxista",
+    "test:dentista": "cypress run --env profissao=dentista",
+    "test:medica": "cypress run --env profissao=medica",
+    "test": "npm run test:professora && npm run test:programadora && npm run test:arquiteta && npm run test:taxista && npm run test:dentista && npm run test:medica"
+  },
+  "keywords": [],
+  "author": "Walmyr <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.9.0"
+  }
+}

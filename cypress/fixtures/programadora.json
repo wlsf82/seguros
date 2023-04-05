@@ -1,0 +1,10 @@
+{
+  "profissao": "programadora",
+  "seguros": {
+    "vida": "be.checked",
+    "odontologico": "be.checked",
+    "carro": "be.checked",
+    "cyber": "not.be.checked",
+    "roubo": "be.checked"
+  }
+}

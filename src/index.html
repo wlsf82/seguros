@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #tipos-de-seguro {
+      display: none
+    }
+  </style>
+  <title>Seguros</title>
+</head>
+<body>
+  <h1>Seguros ABC</h1>
+  <label for="profissão">Profissão</label>
+  <select name="profissao" id="profissao">
+    <option selected="selected" value="default" disabled>Selecione</option>
+    <option value="professora">Professora</option>
+    <option value="programadora">Programadora</option>
+    <option value="arquiteta">Arquiteta</option>
+    <option value="taxista">Taxista</option>
+    <option value="dentista">Dentista</option>
+    <option value="medica">Médica</option>
+  </select>
+  <div id="tipos-de-seguro">
+    <h2>Tipo de seguro</h2>
+    <label for="vida">Vida</label>
+    <input type="checkbox" name="vida" id="vida" checked="true" disabled="disabled">
+    <label for="odontologico">Odontológico</label>
+    <input type="checkbox" name="odontologico" id="odontologico" checked="true" disabled="disabled">
+    <label for="carro">Carro</label>
+    <input type="checkbox" name="carro" id="carro" checked="true" disabled="disabled">
+    <label for="cyber">Cyber</label>
+    <input type="checkbox" name="cyber" id="cyber" checked="true" disabled="disabled">
+    <label for="roubo">Roubo</label>
+    <input type="checkbox" name="roubo" id="roubo" checked="true" disabled="disabled">
+  </div>
+  <script>
+    const selectProfissao = document.getElementById('profissao')
+    const tipoDeSeguro = document.getElementById('tipos-de-seguro')
+    const checkboxRoubo = document.getElementById('roubo')
+    const checkboxCyber = document.getElementById('cyber')
+    selectProfissao.addEventListener('change', evento => {
+      if (evento.target.value === 'taxista') {
+        checkboxRoubo.disabled = ''
+        checkboxRoubo.checked = false
+        checkboxRoubo.disabled = true
+      } else {
+        checkboxRoubo.disabled = ''
+        checkboxRoubo.checked = true
+        checkboxRoubo.disabled = true
+      }
+      if (event.target.value === 'programadora') {
+        checkboxCyber.disabled = ''
+        checkboxCyber.checked = false
+        checkboxCyber.disabled = true
+      } else {
+        checkboxCyber.disabled = ''
+        checkboxCyber.checked = true
+        checkboxCyber.disabled = true
+      }
+      tipoDeSeguro.style.display = 'block'
+    }, false)
+  </script>
+</body>
+</html>

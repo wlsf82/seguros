@@ -1,0 +1,10 @@
+{
+  "profissao": "arquiteta",
+  "seguros": {
+    "vida": "be.checked",
+    "odontologico": "be.checked",
+    "carro": "be.checked",
+    "cyber": "be.checked",
+    "roubo": "be.checked"
+  }
+}
