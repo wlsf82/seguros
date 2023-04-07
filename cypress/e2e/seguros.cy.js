@@ -2,7 +2,7 @@ const fixtureFile = Cypress.env('profissao') ? Cypress.env('profissao') : 'arqui
 const fixture = require(`../fixtures/${fixtureFile}`)
 const { profissao, seguros } = fixture
 
-describe(`Seguros ABC`, () => {
+describe('Seguros ABC', () => {
   it(`seleciona a profissão "${profissao}" e verifica os seguros aplicáveis`, () => {
     // Arrange
     cy.visit('./src/index.html')
