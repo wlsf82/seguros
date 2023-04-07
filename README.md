@@ -1,5 +1,7 @@
 # Seguros ABC
 
+[![CI](https://github.com/wlsf82/seguros/actions/workflows/ci.yml/badge.svg)](https://github.com/wlsf82/seguros/actions)
+
 Aplicação exemplo para demonstração de testes automatizados escritos com [Cypress](https://cypress.io).
 
 ___
