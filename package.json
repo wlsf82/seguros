@@ -19,7 +19,13 @@
     "test:medica": "cypress run --env profissao=medica",
     "test": "npm run test:professora && npm run test:programadora && npm run test:arquiteta && npm run test:taxista && npm run test:dentista && npm run test:medica"
   },
-  "keywords": [],
+  "keywords": [
+    "testing",
+    "fixtures",
+    "web-testing",
+    "cypress-io",
+    "talking-about-testing"
+  ],
   "author": "Walmyr <wlsf82@gmail.com> (https://walmyr.dev/)",
   "license": "MIT",
   "devDependencies": {
