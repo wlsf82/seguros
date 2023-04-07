@@ -1,0 +1,62 @@
+[
+  {
+    "profissao": "arquiteta",
+    "seguros": {
+      "vida": "be.checked",
+      "odontologico": "be.checked",
+      "carro": "be.checked",
+      "cyber": "be.checked",
+      "roubo": "be.checked"
+    }
+  },
+  {
+    "profissao": "dentista",
+    "seguros": {
+      "vida": "be.checked",
+      "odontologico": "be.checked",
+      "carro": "be.checked",
+      "cyber": "be.checked",
+      "roubo": "be.checked"
+    }
+  },
+  {
+    "profissao": "medica",
+    "seguros": {
+      "vida": "be.checked",
+      "odontologico": "be.checked",
+      "carro": "be.checked",
+      "cyber": "be.checked",
+      "roubo": "be.checked"
+    }
+  },
+  {
+    "profissao": "professora",
+    "seguros": {
+      "vida": "be.checked",
+      "odontologico": "be.checked",
+      "carro": "be.checked",
+      "cyber": "be.checked",
+      "roubo": "be.checked"
+    }
+  },
+  {
+    "profissao": "programadora",
+    "seguros": {
+      "vida": "be.checked",
+      "odontologico": "be.checked",
+      "carro": "be.checked",
+      "cyber": "not.be.checked",
+      "roubo": "be.checked"
+    }
+  },
+  {
+    "profissao": "taxista",
+    "seguros": {
+      "vida": "be.checked",
+      "odontologico": "be.checked",
+      "carro": "be.checked",
+      "cyber": "be.checked",
+      "roubo": "not.be.checked"
+    }
+  }  
+]
