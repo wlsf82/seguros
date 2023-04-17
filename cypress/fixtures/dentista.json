@@ -6,5 +6,12 @@
     "carro": "be.checked",
     "cyber": "be.checked",
     "roubo": "be.checked"
+  },
+  "termos": {
+    "vida": "be.visible",
+    "odontologico": "be.visible",
+    "carro": "be.visible",
+    "cyber": "be.visible",
+    "roubo": "be.visible"
   }
 }
