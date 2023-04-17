@@ -14,8 +14,11 @@
     label {
       color: #2a2a2a;
     }
-    #tipos-de-seguro {
-      display: none
+    #tipos-de-seguro, #termos, #btn-proximo {
+      display: none;
+    }
+    #btn-proximo {
+      margin-top: 20px;
     }
   </style>
   <title>Seguros</title>
@@ -45,12 +48,25 @@
     <label for="roubo">Roubo</label>
     <input type="checkbox" name="roubo" id="roubo" checked="true" disabled="disabled">
   </div>
+  <button id="btn-proximo">Próximo</button>
+  <div id="termos">
+    <h2>Termos</h2>
+  </div>
   <script>
     const selectProfissao = document.getElementById('profissao')
     const tipoDeSeguro = document.getElementById('tipos-de-seguro')
-    const checkboxRoubo = document.getElementById('roubo')
+    const checkboxVida = document.getElementById('vida')
+    const checkboxOdontologico = document.getElementById('odontologico')
+    const checkboxCarro = document.getElementById('carro')
     const checkboxCyber = document.getElementById('cyber')
+    const checkboxRoubo = document.getElementById('roubo')
+    const buttonProximo = document.getElementById('btn-proximo')
+    const termos = document.getElementById('termos')
     selectProfissao.addEventListener('change', evento => {
+      if (document.querySelector('#termos ul')) {
+        document.querySelector('#termos').style.display = 'none'
+        document.querySelector('#termos ul').remove()
+      }
       if (evento.target.value === 'taxista') {
         checkboxRoubo.disabled = ''
         checkboxRoubo.checked = false
@@ -70,7 +86,43 @@
         checkboxCyber.disabled = true
       }
       tipoDeSeguro.style.display = 'block'
+      buttonProximo.style.display = 'block'
     }, false)
+    buttonProximo.addEventListener('click', () => {
+      termos.style.display = 'block'
+      const listaDeTermos = document.createElement('ul')
+      termos.appendChild(listaDeTermos)
+      if (checkboxVida.checked) {
+        const itemVida = document.createElement('li')
+        const textoVida = document.createTextNode('Seguro do tipo: vida (aplicável)')
+        itemVida.appendChild(textoVida)
+        listaDeTermos.appendChild(itemVida)
+      }
+      if (checkboxOdontologico.checked) {
+        const itemOdontologico = document.createElement('li')
+        const Odontologico = document.createTextNode('Seguro do tipo: odontologico (aplicável)')
+        itemOdontologico.appendChild(Odontologico)
+        listaDeTermos.appendChild(itemOdontologico)
+      }
+      if (checkboxCarro.checked) {
+        const itemCarro = document.createElement('li')
+        const textoCarro = document.createTextNode('Seguro do tipo: carro (aplicável)')
+        itemCarro.appendChild(textoCarro)
+        listaDeTermos.appendChild(itemCarro)
+      }
+      if (checkboxCyber.checked) {
+        const itemCyber = document.createElement('li')
+        const textoCyber = document.createTextNode('Seguro do tipo: cyber (aplicável)')
+        itemCyber.appendChild(textoCyber)
+        listaDeTermos.appendChild(itemCyber)
+      }
+      if (checkboxRoubo.checked) {
+        const itemRoubo = document.createElement('li')
+        const textoRoubo = document.createTextNode('Seguro do tipo: roubo (aplicável)')
+        itemRoubo.appendChild(textoRoubo)
+        listaDeTermos.appendChild(itemRoubo)
+      }
+    })
   </script>
 </body>
 </html>
